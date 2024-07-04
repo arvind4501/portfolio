@@ -69,4 +69,8 @@ group :test do
   gem "selenium-webdriver"
 end
 
+
+gem 'sassc', github: 'sass/sassc-ruby', branch: 'master'
+
 gem 'activeadmin'
+gem 'devise'
