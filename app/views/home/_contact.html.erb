@@ -1,0 +1,20 @@
+<div class="max-w-xl mx-auto py-8">
+  <h2 class="text-2xl font-bold mb-6 text-center">Contact Me</h2>
+  <%= form_with url: contact_path, method: :post, local: true, class: "space-y-4" do |form| %>
+    <div>
+      <%= form.label :name, class: "block text-sm font-medium text-gray-700" %>
+      <%= form.text_field :name, required: true, class: "mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+    </div>
+    <div>
+      <%= form.label :email, class: "block text-sm font-medium text-gray-700" %>
+      <%= form.email_field :email, required: true, class: "mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+    </div>
+    <div>
+      <%= form.label :message, class: "block text-sm font-medium text-gray-700" %>
+      <%= form.text_area :message, required: true, rows: 5, class: "mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+    </div>
+    <div class="text-center">
+      <%= form.submit "Send Message", class: "px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" %>
+    </div>
+  <% end %>
+</div>
