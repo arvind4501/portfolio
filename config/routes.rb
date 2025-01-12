@@ -11,5 +11,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
-  post 'contact', to: 'home#contact'
+  # post 'contact', to: 'home#contact'
+  post "/contact", to: "home#send_message", as: :send_contact
+  get "/about", to: "home#about", as: :about
+  get "/projects", to: "home#projects", as: :project
+  get "/contact", to: "home#contact", as: :contact
 end

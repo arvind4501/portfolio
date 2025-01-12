@@ -1,20 +1,29 @@
 <div class="container mx-auto">
-  <%= turbo_frame_tag 'main-content' do %>
-    <section>
-      <div class="px-[80px] py-12 bg-[#21212e] 2xl:py-2 xl:py-2 lg:py-2 md:py-2 sm:py-2">
-          <div class="mx-[5px] -mt-[30px] h-[250px] w-[250px] sm:h-[220px] sm:w-[220px] sm:mt-[50px] sm:mx-[320px] md:h-[250px] md:w-[250px] md:mt-[50px] md:mx-[410px] lg:h-[250px] lg:w-[250px] lg:mt-[50px] lg:mx-[700px] xl:h-[250px] xl:w-[250px] xl:mt-[50px] xl:mx-[800px] 2xl:h-[250px] 2xl:w-[250px] 2xl:mt-[50px] 2xl:mx-[900px]">
-              <img src="img/hero-img.png" class="select-none">
-          </div>
-          <div class="mt-5 sm:-mt-[200px] sm:-mx-[30px] md:mx-[10px] lg:mx-[50px] xl:mx-[220px] 2xl:mx-[250px]">
-              <span class="text-white text-3xl">👋 Hi, I'm <span class="text-[#793fff] text-3xl font-bold">Arvind</span></span>
-          </div>
-          <div class="mt-4 text-justify sm:-mx-[30px] md:mx-[10px] lg:mx-[50px] xl:mx-[220px] 2xl:mx-[250px]">
-              <span class="text-white text-1xl z-50">Well I am a Web Developer working to<br>make internet a place with modern sites.<br><span class="font-semibold">Know more about me below. ⬇️</span></span><br>
-          </div>
-          <div class="mt-4 sm:pb-[50px] sm:-mx-[30px] md:mx-[10px] lg:mx-[50px] xl:mx-[220px] 2xl:mx-[250px]">
-              <button class="bg-[#793fff] text-white h-10 w-40 rounded-[5px] shadow-lg shadow-[#793fff]/30">Download CV</button>
-          </div>
+  <section class="py-12 bg-[#21212e]">
+    <div class="flex flex-col items-center justify-center space-y-8">
+      
+      <!-- Hero Image Section -->
+      <div class="relative">
+        <img src="img/hero-img.png" class="h-[250px] w-[250px] sm:h-[220px] sm:w-[220px] md:h-[250px] md:w-[250px] lg:h-[250px] lg:w-[250px] xl:h-[250px] xl:w-[250px] 2xl:h-[250px] 2xl:w-[250px] rounded-full object-cover">
       </div>
-    </section>
-  <% end %>
+      
+      <!-- Greeting Text -->
+      <div class="text-center text-white text-3xl sm:text-4xl">
+        <span>👋 Hi, I'm <span class="text-[#793fff] font-bold">Arvind</span></span>
+      </div>
+
+      <!-- Description Section -->
+      <div class="text-center text-white text-lg sm:text-xl">
+        <p class="text-justify">Well, I am a Web Developer working to make the internet a place with modern, user-friendly websites.</p>
+        <p class="font-semibold mt-2">Know more about me below. ⬇️</p>
+      </div>
+
+      <!-- Button Section -->
+      <div class="mt-4">
+        <a href="https://drive.google.com/file/d/1ZH5YkwrLXRGwtbUZ0X_xOK8U2OhzsQId/view?usp=sharing" target="_blank" class="text-white py-3 px-8 rounded-lg shadow-lg  text-lg font-semibold transition transform  hover:scale-105 focus:outline-none focus:ring-2  focus:ring-opacity-50">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
 </div>

@@ -15,9 +15,18 @@
 
   <body>
     <%= render partial: 'shared/header' %>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+      <main class="container mx-auto px-5">
+          <% if flash[:notice] %>
+            <div class="bg-green-500 text-black p-4 text-center mb-4 mt-4 relative">
+              <%= flash[:notice] %>
+            </div>
+          <% elsif flash[:alert] %>
+            <div class="bg-red-500 text-black p-4 text-center mb-4 mt-4 relative">
+              <%= flash[:alert] %>
+            </div>
+          <% end %>
+          <%= yield %>
+      </main>
     <%= render partial: 'shared/footer' %>
   </body>
 </html>
