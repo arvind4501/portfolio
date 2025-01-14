@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'home/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -10,10 +9,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  root "home#index"
+  # root "home#index"
+  root 'page#index'
   # post 'contact', to: 'home#contact'
   post "/contact", to: "home#send_message", as: :send_contact
-  get "/about", to: "home#about", as: :about
-  get "/projects", to: "home#projects", as: :project
-  get "/contact", to: "home#contact", as: :contact
 end
